@@ -1,6 +1,14 @@
 import streamlit as st
 import requests
-import webbrowser
+from streamlit.components.v1 import html
+
+def open_page(url):
+    open_script= """
+        <script type="text/javascript">
+            window.open('%s', '_blank').focus();
+        </script>
+    """ % (url)
+    html(open_script)
 
 def get_car_info(plate):
     try:
@@ -36,8 +44,8 @@ def get_response(message):
 def main():
     st.title("Vérification de Plaques d'Immatriculation de radar privé")
     user_input = st.text_input("Entrez une plaque d'immatriculation :")
-    button_beytek = st.button("prooulsé par BeyTek")
     button_rech= st.button("Rechercher")
+    st.button('Propulsé par BeyTek', on_click=open_page, args=('https://beytek.fr',))
     lsttxt= st.write("Liste des plaques d'immatriculations de voiture radar priné:",radar_priver)
     if button_rech:
         response = get_response(user_input.lower())
@@ -45,8 +53,7 @@ def main():
     if user_input:
         response = get_response(user_input.lower())
         st.write(response) 
-    if button_beytek:
-         webbrowser.open("https://www.beytek.fr")   
+    
 
 if __name__ == '__main__':
     main()
