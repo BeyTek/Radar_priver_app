@@ -36,23 +36,19 @@ def get_response(message):
         return f"Désolé, nous ne parvenons pas à trouver les informations de cette plaque d'immatriculation."
 
 def main():
-    st.title("Vérification de Plaques d'Immatriculation de radar privé")
+    st.title("Correspondance de plaques d'immatriculation avec notre liste de radars privés")
     user_input = st.text_input("Entrez une plaque d'immatriculation :")
     button_rech= st.button("Rechercher")
     if button_rech:
         response = get_response(user_input.lower())
         st.write(response)
-    if user_input:
-        response = get_response(user_input.lower())
-        st.write(response) 
     if st.button("Propulsé par BeyTek"):
         # Lien URL
         url = "https://beytek.fr"
         # Ouvrir le lien dans une nouvelle fenêtre du navigateur
         st.markdown(f"[{url}]({url})", unsafe_allow_html=True)
     
-    st.write(f"Nombre total de plaques : {len(radar_priver)}")
-    
+    st.write(f"Nombre total de plaques dans base de données : {len(radar_priver)}")
     
     
 
