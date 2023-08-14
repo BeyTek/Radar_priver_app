@@ -48,7 +48,7 @@ def main():
         # Ouvrir le lien dans une nouvelle fenêtre du navigateur
         st.markdown(f"[{url}]({url})", unsafe_allow_html=True)
     
-    st.write(f"Nombre total de plaques dans base de données : {len(radar_priver)}")
+    st.title(f"Nombre total de plaques dans base de données : {len(radar_priver)}")
     
     
 
