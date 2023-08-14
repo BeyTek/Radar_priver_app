@@ -38,7 +38,8 @@ def get_response(message):
 def main():
     st.title("Correspondance de plaques d'immatriculation avec notre liste de radars privés")
     user_input = st.text_input("Entrez une plaque d'immatriculation :")
-    button_rech= st.button("Rechercher")
+    button_rech = st.button("Rechercher")
+    
     if button_rech:
         response = get_response(user_input.lower())
         st.write(response)
@@ -47,16 +48,21 @@ def main():
         # Lien URL
         url1 = "https://urlz.fr/ndD5"
         # Ouvrir le lien dans une nouvelle fenêtre du navigateur
-        st.markdown(f"[{url1}]({url1})", unsafe_allow_html=True
+        st.markdown(f"[Télécharger pour Android]({url1})", unsafe_allow_html=True)
+    
     if st.button("Propulsé par BeyTek"):
         # Lien URL
         url = "https://beytek.fr"
         # Ouvrir le lien dans une nouvelle fenêtre du navigateur
-        st.markdown(f"[{url}]({url})", unsafe_allow_html=True)
+        st.markdown(f"[Propulsé par BeyTek]({url})", unsafe_allow_html=True)
     
-    st.title(f"Nombre total de plaques dans base de données : {len(radar_priver)}")
-    
-    
+    st.title(f"Nombre total de plaques dans la base de données : {len(radar_priver)}")
 
 if __name__ == '__main__':
     main()
+
+
+
+
+
+
