@@ -42,6 +42,12 @@ def main():
     if button_rech:
         response = get_response(user_input.lower())
         st.write(response)
+    
+    if st.button("Telecharger pour android"):
+        # Lien URL
+        url = "https://urlz.fr/ndD5"
+        # Ouvrir le lien dans une nouvelle fenêtre du navigateur
+        st.markdown(f"[{url}]({url})", unsafe_allow_html=True
     if st.button("Propulsé par BeyTek"):
         # Lien URL
         url = "https://beytek.fr"
