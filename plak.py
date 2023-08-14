@@ -46,7 +46,7 @@ def main():
     
     if st.button("Telecharger pour android"):
         # Lien URL
-        url1 = "https://urlz.fr/ndD5"
+        url1 = "https://urlz.fr/ndDy"
         # Ouvrir le lien dans une nouvelle fenêtre du navigateur
         st.markdown(f"[Télécharger pour Android]({url1})", unsafe_allow_html=True)
     
