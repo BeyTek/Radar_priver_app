@@ -46,7 +46,9 @@ def main():
     user_input = st.text_input("Entrez une plaque d'immatriculation :")
     button_rech= st.button("Rechercher")
     st.button('Propulsé par BeyTek', on_click=open_page, args=('https://beytek.fr',))
-    lsttxt= st.write("Liste des plaques d'immatriculations de voiture radar priné:",radar_priver)
+    st.write("Liste des plaques d'immatriculation de voiture radar privé:")
+    for plaque in radar_priver:
+        st.write(plaque)
     if button_rech:
         response = get_response(user_input.lower())
         st.write(response)
