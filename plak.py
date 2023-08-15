@@ -33,7 +33,7 @@ def get_car_info(plate):
 def get_response(message):
     car_info = get_car_info(message)
     if car_info:
-        if message in radar_priver:
+        if message.lower() in radar_priver:
             return f"Voiture Radar Confirmée!!!\n{car_info}"
         else:
             return f"Cette voiture ne semble pas être un radar\n{car_info}"
