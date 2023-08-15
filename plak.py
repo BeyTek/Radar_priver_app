@@ -43,6 +43,7 @@ def get_response(message):
 def main():
     st.title("Correspondance de plaques d'immatriculation avec notre liste de radars privés")
     user_input = st.text_input("Entrez une plaque d'immatriculation :")
+    user_input = user_input.replace("-", "").lower()  # Suppression des tirets et conversion en minuscules
     button_rech = st.button("Rechercher")
     
     if button_rech:
