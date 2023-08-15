@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 from streamlit.components.v1 import html
-
+import json
 
 def load_plates_from_json(file_path):
     with open(file_path, "r") as json_file:
