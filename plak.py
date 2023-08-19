@@ -60,11 +60,11 @@ def main():
     
     st.title(f"Nombre total de plaques dans la base de données : {len(radar_priver)}")
 
-st.markdown("---")
-st.title("Credits")
-st.write("Made by [BeyTek](https://www.beytek.fr)")
-st.write("[CBD&+](https://purplebey.fr/boutique)")
-st.write("[Verison Android](https://urlz.fr/ndDy)")
+    st.markdown("---")
+    st.title("Credits")
+    st.write("Made by [BeyTek](https://www.beytek.fr)")
+    st.write("[CBD&+](https://purplebey.fr/boutique)")
+    st.write("[Verison Android](https://urlz.fr/ndDy)")
 if __name__ == '__main__':
     main()
 
