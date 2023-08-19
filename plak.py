@@ -48,25 +48,23 @@ def main():
     user_input = st.text_input("Entrez une plaque d'immatriculation :")
     user_input = user_input.replace("-", "").lower()  # Suppression des tirets et conversion en minuscules
     button_rech = st.button("Rechercher")
-    
+    st.text("Format✅: az-123-jl & AZ-123-JL")
+    st.text("Format🚫: az123jl & az123jl")
     if button_rech:
         response = get_response(user_input.lower())
         st.write(response)
     
-    if st.button("Telecharger pour android"):
-        # Lien URL
-        url1 = "https://urlz.fr/ndDy"
-        # Ouvrir le lien dans une nouvelle fenêtre du navigateur
-        st.markdown(f"[Télécharger pour Android]({url1})", unsafe_allow_html=True)
+
     
-    if st.button("Propulsé par BeyTek"):
-        # Lien URL
-        url = "https://beytek.fr"
-        # Ouvrir le lien dans une nouvelle fenêtre du navigateur
-        st.markdown(f"[Propulsé par BeyTek]({url})", unsafe_allow_html=True)
+
     
     st.title(f"Nombre total de plaques dans la base de données : {len(radar_priver)}")
 
+st.markdown("---")
+st.title("Credits")
+st.write("Made by [BeyTek](https://www.beytek.fr)")
+st.write("[CBD&+](https://purplebey.fr/boutique)")
+st.write("[Verison Android](https://urlz.fr/ndDy)")
 if __name__ == '__main__':
     main()
 
