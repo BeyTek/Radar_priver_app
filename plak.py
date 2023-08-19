@@ -4,7 +4,7 @@ from streamlit.components.v1 import html
 import json
 st.set_page_config(
     page_title="Radar privé",
-    page_icon="👁️",
+    page_icon="📷",
 )
 def load_plates_from_json(file_path):
     with open(file_path, "r") as json_file:
