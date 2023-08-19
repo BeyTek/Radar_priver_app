@@ -48,8 +48,8 @@ def main():
     user_input = st.text_input("Entrez une plaque d'immatriculation :")
     user_input = user_input.replace("-", "").lower()  # Suppression des tirets et conversion en minuscules
     button_rech = st.button("Rechercher")
-    st.text("Format✅: az-123-jl & AZ-123-JL")
-    st.text("Format🚫: az123jl & az123jl")
+    st.text("Format✅: az-123-jl ")
+    st.text("Format🚫: AZ-123-JL & az123jl")
     if button_rech:
         response = get_response(user_input.lower())
         st.write(response)
