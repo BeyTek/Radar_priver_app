@@ -49,7 +49,7 @@ def main():
     user_input = user_input.replace("-", "").lower()  # Suppression des tirets et conversion en minuscules
     button_rech = st.button("Rechercher")
     st.text("Format✅: az-123-jl ")
-    st.text("Format🚫: AZ-123-JL & az123jl")
+    st.text("Format❌: AZ-123-JL & az123jl")
     if button_rech:
         response = get_response(user_input.lower())
         st.write(response)
